@@ -7,16 +7,14 @@ $(function(){
 			{
 				if($(e.target).hasClass('selected'))
 				{
-					// deselect it
 					$(e.target).removeClass('selected');
 				}
 				else
 				{
-					// select it
+					$('.selected').removeClass('selected');
 					$(e.target).addClass('selected');
 				}
 			}
-			
 		}
 	)
 })
