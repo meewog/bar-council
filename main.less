@@ -17,8 +17,8 @@
 
 body
 {
-	// width: 100%;
-	/*background: black;*/
+	width: 100%;
+	// background: black;
 }
 
 .left
@@ -33,7 +33,9 @@ body
 .container 
 {
 	margin: auto;
+	background: black !important;
 	position: relative;
+	height: 100%;
 }
 
 #floor
@@ -87,7 +89,9 @@ body
 			color: #6f6f6f;
 			padding: 3px;
 			cursor: pointer;
-			-webkit-transition: all 500ms;
+			-webkit-transition: all 1200ms;
+			transition: all 1200ms;
+			-moz-transition: all 1200ms;
 			&.selected
 			{
 				background: red;
