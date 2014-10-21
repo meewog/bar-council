@@ -77,6 +77,57 @@ body
 		border-radius: 2px;
 	}
 
+	.booked
+	{
+		// font-family: arial narrow;
+		font-style: italic;
+		// background: whitesmoke;
+		background: red;
+		float: left;
+		padding: 3px;
+		border: 1px inset red;
+		cursor: not-allowed;
+		// color: silver;
+		color: white;
+		&:hover
+		{
+			-webkit-animation-name: shake;
+			-webkit-animation-duration: 0.8s;
+			-webkit-transform-origin:50% 50%;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+		}
+	}
+
+	.booth
+	{
+		// font-family: arial narrow;
+		background: #FBC13D;
+		float: left;
+		color: #6f6f6f;
+		padding: 3px;
+		cursor: pointer;
+		-webkit-transition: transform 1200ms, background 500ms, font-size 500ms;
+		transition: transform 1200ms, background 500ms, font-size 500ms;
+		-moz-transition: transform 1200ms, background 500ms, font-size 500ms;
+		&.selected
+		{
+			background: rgb(77, 255, 77);
+			color: white;
+			font-size: 2em;
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			transform: rotate(360deg);
+
+			
+		}
+		&:hover
+		{
+			font-size: 2em;
+			background: rgb(77, 255, 77);
+		}
+	}
+
 	#smallSection
 	{
 		width: 100%;
@@ -89,21 +140,22 @@ body
 			color: #6f6f6f;
 			padding: 3px;
 			cursor: pointer;
-			-webkit-transition: all 1200ms;
-			transition: all 1200ms;
-			-moz-transition: all 1200ms;
+			-webkit-transition: transform 1200ms, background 500ms, font-size 500ms;
+			transition: transform 1200ms, background 500ms, font-size 500ms;
+			-moz-transition: transform 1200ms, background 500ms, font-size 500ms;
 			&.selected
 			{
-				background: red;
+				background: rgb(77, 255, 77);
 				color: white;
 				font-size: 2em;
 				-webkit-transform: rotate(360deg);
 				-moz-transform: rotate(360deg);
 				transform: rotate(360deg);
-				&:hover
-				{
-					background: red;
-				}
+				background: blue;
+				// &:hover
+				// {
+				// 	background: red;
+				// }
 				
 			}
 			&:hover
@@ -113,25 +165,7 @@ body
 			}
 		}
 
-		.booked
-		{
-			// font-family: arial narrow;
-			font-style: italic;
-			background: whitesmoke;
-			float: left;
-			padding: 3px;
-			border: 1px inset red;
-			cursor: not-allowed;
-			color: silver;
-			&:hover
-			{
-				-webkit-animation-name: shake;
-				-webkit-animation-duration: 0.8s;
-				-webkit-transform-origin:50% 50%;
-				-webkit-animation-iteration-count: infinite;
-				-webkit-animation-timing-function: linear;
-			}
-		}
+
 
 		.gutter
 		{
@@ -181,12 +215,10 @@ body
 			cursor: pointer;
 			&.selected
 			{
-				background: red;
+				background: blue;
+				color: white;
 			}
-			&:hover
-			{
-				background: rgb(77, 255, 77);
-			}
+
 		}
 
 		.byOne
@@ -209,18 +241,15 @@ body
 			color: #6f6f6f;
 			padding: 3px;
 			cursor: pointer;
-			margin-left: 25px;
-			&.selected
-			{
-				background: red;
-			}
-			&:hover
-			{
-				background: rgb(77, 255, 77);
-			}
+			// margin-left: 25px;
 			&:first-of-type
 			{
 				margin-left: 0px;
+			}
+			&.selected
+			{
+				background: blue;
+				color: white;
 			}
 		}
 	}
